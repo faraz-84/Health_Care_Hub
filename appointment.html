@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - HealthSphere</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/appointment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>HealthSphere</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="appointment.html" class="nav-link appointment-btn active">Book Appointment</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Book Your Appointment</h1>
+                <p>Schedule a consultation with our medical experts</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="appointment-section">
+        <div class="container">
+            <div class="appointment-grid">
+                <div class="appointment-info">
+                    <h2>Why Choose HealthSphere?</h2>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Expert Physicians</h3>
+                                <p>Board-certified doctors with years of experience in their specialties.</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Flexible Scheduling</h3>
+                                <p>Convenient appointment times that fit your busy schedule.</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-hospital"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Modern Facilities</h3>
+                                <p>State-of-the-art equipment and comfortable treatment rooms.</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Insurance Accepted</h3>
+                                <p>We accept most major insurance plans for your convenience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="appointment-form">
+                    <form id="appointmentForm">
+                        <div class="form-header">
+                            <h2>Schedule Your Visit</h2>
+                            <p>Fill out the form below and we'll contact you to confirm your appointment.</p>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-user"></i> Personal Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dateOfBirth">Date of Birth *</label>
+                                <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-calendar"></i> Appointment Details</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="department">Department *</label>
+                                    <select id="department" name="department" required>
+                                        <option value="">Select Department</option>
+                                        <option value="cardiology">Cardiology</option>
+                                        <option value="neurology">Neurology</option>
+                                        <option value="pediatrics">Pediatrics</option>
+                                        <option value="orthopedics">Orthopedics</option>
+                                        <option value="ophthalmology">Ophthalmology</option>
+                                        <option value="pulmonology">Pulmonology</option>
+                                        <option value="general">General Medicine</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="doctor">Preferred Doctor</label>
+                                    <select id="doctor" name="doctor">
+                                        <option value="">Any Available Doctor</option>
+                                        <option value="dr-johnson">Dr. Sarah Johnson</option>
+                                        <option value="dr-rodriguez">Dr. Emily Rodriguez</option>
+                                        <option value="dr-chen">Dr. Michael Chen</option>
+                                        <option value="dr-williams">Dr. James Williams</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="appointmentDate">Preferred Date *</label>
+                                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="appointmentTime">Preferred Time *</label>
+                                    <select id="appointmentTime" name="appointmentTime" required>
+                                        <option value="">Select Time</option>
+                                        <option value="09:00">9:00 AM</option>
+                                        <option value="10:00">10:00 AM</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="14:00">2:00 PM</option>
+                                        <option value="15:00">3:00 PM</option>
+                                        <option value="16:00">4:00 PM</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="visitType">Visit Type *</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="visitType" value="new-patient" required>
+                                        <span class="radio-custom"></span>
+                                        New Patient
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="visitType" value="follow-up" required>
+                                        <span class="radio-custom"></span>
+                                        Follow-up
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="visitType" value="consultation" required>
+                                        <span class="radio-custom"></span>
+                                        Consultation
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-notes-medical"></i> Additional Information</h3>
+                            <div class="form-group">
+                                <label for="symptoms">Reason for Visit / Symptoms</label>
+                                <textarea id="symptoms" name="symptoms" rows="4" placeholder="Please describe your symptoms or reason for the visit..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="insurance">Insurance Provider</label>
+                                <select id="insurance" name="insurance">
+                                    <option value="">Select Insurance Provider</option>
+                                    <option value="aetna">Aetna</option>
+                                    <option value="bluecross">Blue Cross Blue Shield</option>
+                                    <option value="cigna">Cigna</option>
+                                    <option value="humana">Humana</option>
+                                    <option value="medicare">Medicare</option>
+                                    <option value="other">Other</option>
+                                    <option value="self-pay">Self Pay</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-footer">
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="terms" required>
+                                    <span class="checkbox-custom"></span>
+                                    I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+                                </label>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-calendar-check"></i>
+                                Book Appointment
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>HealthSphere</span>
+                    </div>
+                    <p>Dedicated to providing world-class healthcare services with compassion and excellence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html">Cardiology</a></li>
+                        <li><a href="services.html">Neurology</a></li>
+                        <li><a href="services.html">Pediatrics</a></li>
+                        <li><a href="services.html">Orthopedics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Health Street, Medical City</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@healthsphere.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HealthSphere. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/appointment.js"></script>
+</body>
+</html>
